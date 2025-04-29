@@ -4,8 +4,8 @@ namespace Tennis
     {
         private int m_score1 = 0;
         private int m_score2 = 0;
-        private string player1Name;
-        private string player2Name;
+        private string player1Name; // Primitive obsession
+        private string player2Name; // Primitive obsession
 
         public TennisGame1(string player1Name, string player2Name)
         {
@@ -16,18 +16,18 @@ namespace Tennis
         public void WonPoint(string playerName)
         {
             if (playerName == "player1")
-                m_score1 += 1;
+                m_score1 += 1; // Duplicated code
             else
-                m_score2 += 1;
+                m_score2 += 1; // Duplicated code
         }
 
         public string GetScore()
         {
-            string score = "";
-            var tempScore = 0;
+            string score = ""; // Primitive obsession
+            var tempScore = 0; 
             if (m_score1 == m_score2)
             {
-                switch (m_score1)
+                switch (m_score1) // duplicated code
                 {
                     case 0:
                         score = "Love-All";
@@ -58,7 +58,7 @@ namespace Tennis
                 {
                     if (i == 1) tempScore = m_score1;
                     else { score += "-"; tempScore = m_score2; }
-                    switch (tempScore)
+                    switch (tempScore) // duplicated code
                     {
                         case 0:
                             score += "Love";
